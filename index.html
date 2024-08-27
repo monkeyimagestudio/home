@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONKEY</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="header">
+        <div class="opennav">
+            <span style="cursor:pointer" onclick="openNav()">MENU</span>
+        </div>
+        <div class="logo">
+            <h1>MONKEY</h1>
+        </div>
+    </div>
+
+    <nav id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <ul class="nav-list">
+
+            <li class="nav-item dropdown">
+                <a href="" class="dropdown-toggle">Photography</a>
+                <ul class="dropdown-menu">
+                    <li><a href="https://monkeyimagestudio.github.io/beauty/">Beauty</a></li>
+                    <li><a href="https://monkeyimagestudio.github.io/18/">18+</a></li>
+                </ul>
+            </li>
+
+            <!-- Add more items as needed -->
+        </ul>
+    </nav>
+
+<script>
+    function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+<script>
+   document.addEventListener('DOMContentLoaded', () => {
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    dropdowns.forEach(dropdown => {
+        const toggle = dropdown.querySelector('.dropdown-toggle');
+        const menu = dropdown.querySelector('.dropdown-menu');
+
+        toggle.addEventListener('click', (e) => {
+            // Only prevent default action if href is empty
+            if (!toggle.getAttribute('href') || toggle.getAttribute('href') === '#') {
+                e.preventDefault();
+                const isOpen = menu.style.display === 'block';
+
+                // Close all dropdown menus
+                document.querySelectorAll('.dropdown-menu').forEach(m => {
+                    m.style.display = 'none';
+                });
+
+                // Toggle the clicked dropdown menu
+                menu.style.display = isOpen ? 'none' : 'block';
+            }
+        });
+    });
+
+    // Close all dropdown menus if clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.dropdown')) {
+            document.querySelectorAll('.dropdown-menu').forEach(m => {
+                m.style.display = 'none';
+            });
+        }
+    });
+});
+    </script>
+
+<script>
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+</script>
+
+<div class="gallery-box">
+    <h1>Welcome</h1>
+</div>
+
+    
+    <!-------------------->
+  
+    
+</div>
+
+
+</body>
+</html>
