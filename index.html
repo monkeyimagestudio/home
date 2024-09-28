@@ -59,7 +59,10 @@ function closeNav() {
 </script>
 
 <script>
-   document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', () => {
+    // Ensure the sidenav is closed on page load
+    document.getElementById("mySidenav").style.width = "0";
+
     const dropdowns = document.querySelectorAll('.dropdown');
 
     dropdowns.forEach(dropdown => {
@@ -67,7 +70,6 @@ function closeNav() {
         const menu = dropdown.querySelector('.dropdown-menu');
 
         toggle.addEventListener('click', (e) => {
-            // Only prevent default action if href is empty
             if (!toggle.getAttribute('href') || toggle.getAttribute('href') === '#') {
                 e.preventDefault();
                 const isOpen = menu.style.display === 'block';
@@ -92,11 +94,23 @@ function closeNav() {
         }
     });
 });
-</script>
-    
+    </script>
+
 <div class="gallery-box">
-    <h1>Welcome</h1>
+    <div class="image-gallery">
+        <a href="https://imag1nationlab.github.io/black-white/"><img src="https://live.staticflickr.com/65535/53932565417_3b2d249301_k.jpg" alt=""></a>
+        <div class="h3">Black & White</div>
+    </div>
+    <!-------------------->
+    <div class="image-gallery">
+
+    </div>
+    <div class="image-gallery">
+       
+    </div>
+    
 </div>
+
 
 </body>
 </html>
