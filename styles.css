@@ -33,13 +33,14 @@
       }
       
     .sidenav {
-        width: 250px;
+        width: 0;
         height: 100vh;
         background-color: #ffffff;
         overflow-y: auto;
         position: fixed;
         top: 0;
         left: 0;
+        transition: width 0.3s;
     
     }
     
