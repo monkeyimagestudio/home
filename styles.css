@@ -1,3 +1,4 @@
+
 /**************************************************************/
 
 @media screen and (min-width:300px) and (max-width: 768px){
@@ -95,11 +96,21 @@
     }
     
     .gallery-box{
+        padding-top: 3%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 100%;
+    }
+      .image-gallery img {
         width: 100%;
-        text-align: center;
-        
+        object-fit: cover;
+        border: 1px solid #ccc;
       }
-        
+    
+      .image-gallery .h3{
+        text-align: center;
+    }
+    
     
     }
     
@@ -200,11 +211,21 @@
         }
         
         .gallery-box{
+            padding-top: 3%;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            max-width: 100%;
+        }
+          .image-gallery img {
             width: 100%;
-            text-align: center;
-            
+            object-fit: cover;
+            border: 1px solid #ccc;
           }
-            
+        
+          .image-gallery .h3{
+            text-align: center;
+        }
+        
         
     }
         /***************************/
@@ -302,11 +323,21 @@
     }
     
     .gallery-box{
+        padding-top: 3%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 100%;
+    }
+      .image-gallery img {
         width: 100%;
-        text-align: center;
-        
+        object-fit: cover;
+        border: 1px solid #ccc;
       }
-        
+    
+      .image-gallery .h3{
+        text-align: center;
+    }
+    
     
 }
 /***************************/
@@ -404,11 +435,21 @@
         background-color: #575757;
     }
     
-  .gallery-box{
-    width: 100%;
-    text-align: center;
+    .gallery-box{
+        padding-top: 3%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 100%;
+    }
+      .image-gallery img {
+        width: 100%;
+        object-fit: cover;
+        border: 1px solid #ccc;
+      }
     
-  }
+      .image-gallery .h3{
+        text-align: center;
+    }
     
     
 
